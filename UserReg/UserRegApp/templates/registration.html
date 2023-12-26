@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="POST">
+    {% csrf_token %}
+    <!--User Name-->
+        <label for="username">Name: </label>
+        <input type="text" placeholder="Enter Name" name="username"><br><br>
+    <!--Email-->
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Enter Email" name="email"><br><br>
+    <!--Password-->
+        <label for="password">Enter password: </label>
+        <input type="password" placeholder="Enter password" name="password"><br><br>
+    <!--Confirm Password-->
+        <label for="conpassword">Confirm Password: </label>
+        <input type="password" placeholder="Confirm Password" name="conpassword"><br><br>
+    <!--SignUp-->
+        <input type="submit" value="SignUp"><br>
+    <!--login page redirected link-->
+    <a href="{% url 'login' %}">I already have account</a>
+    </form>
+</body>
+</html>
